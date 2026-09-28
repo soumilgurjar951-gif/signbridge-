@@ -1,0 +1,131 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+:root {
+  --sb-indigo: #e11d48;
+  --sb-teal: #f43f5e;
+  --focus-ring: 0 0 0 3px #fff, 0 0 0 6px #f43f5e;
+  color-scheme: light;
+}
+
+html {
+  scroll-behavior: smooth;
+}
+
+body {
+  @apply bg-white text-slate-900 antialiased;
+  text-rendering: optimizeLegibility;
+}
+
+.dark {
+  color-scheme: dark;
+}
+
+.dark body,
+.dark {
+  @apply bg-navy-900 text-slate-100;
+}
+
+/* High-contrast accessible focus */
+*:focus-visible {
+  outline: none;
+  box-shadow: var(--focus-ring);
+  border-radius: 12px;
+}
+
+/* Skip link */
+.skip-link {
+  position: absolute;
+  left: -9999px;
+  top: 0;
+  z-index: 100;
+}
+.skip-link:focus {
+  left: 1rem;
+  top: 1rem;
+  @apply bg-white text-indigo px-5 py-3 rounded-2xl font-semibold shadow-lift;
+}
+
+/* Soft gradient text */
+.text-gradient {
+  background: linear-gradient(92deg, #ffe4e6 0%, #fda4af 55%, #fff1f2 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+.text-gradient-dark {
+  background: linear-gradient(92deg, #881337 0%, #e11d48 65%, #be123c 100%);
+  -webkit-background-clip: text;
+  background-clip: text;
+  color: transparent;
+}
+
+/* Animated dashed border */
+.dashed-pulse {
+  background-image: linear-gradient(90deg, #f43f5e 50%, transparent 50%),
+    linear-gradient(90deg, #f43f5e 50%, transparent 50%),
+    linear-gradient(0deg, #f43f5e 50%, transparent 50%),
+    linear-gradient(0deg, #f43f5e 50%, transparent 50%);
+  background-repeat: repeat-x, repeat-x, repeat-y, repeat-y;
+  background-size: 18px 2px, 18px 2px, 2px 18px, 2px 18px;
+  background-position: 0 0, 0 100%, 0 0, 100% 0;
+}
+
+/* Skeleton shimmer */
+.skeleton {
+  background: linear-gradient(90deg, #e2e8f0 25%, #f1f5f9 37%, #e2e8f0 63%);
+  background-size: 200% 100%;
+  animation: shimmer 1.8s linear infinite;
+}
+.dark .skeleton {
+  background: linear-gradient(90deg, #2a1a20 25%, #3b232c 37%, #2a1a20 63%);
+  background-size: 200% 100%;
+}
+
+/* Waveform bars */
+@keyframes eq {
+  0%, 100% { transform: scaleY(0.4); }
+  50% { transform: scaleY(1); }
+}
+.eq-bar {
+  transform-origin: center;
+  animation: eq 1.1s ease-in-out infinite;
+}
+
+/* Particle trail for stepper */
+@keyframes dashMove {
+  to { stroke-dashoffset: -24; }
+}
+.trail-line {
+  stroke-dasharray: 6 6;
+  animation: dashMove 1s linear infinite;
+}
+
+/* Reduced motion: disable everything */
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+  }
+}
+.reduce-motion *, .reduce-motion *::before, .reduce-motion *::after {
+  animation-duration: 0.001ms !important;
+  animation-iteration-count: 1 !important;
+  transition-duration: 0.001ms !important;
+}
+
+/* Large touch targets */
+button, a {
+  min-height: 44px;
+}
+button.compact, a.compact {
+  min-height: 36px;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar { width: 10px; height: 10px; }
+::-webkit-scrollbar-track { background: transparent; }
+::-webkit-scrollbar-thumb { @apply bg-slate-300 dark:bg-navy-600 rounded-full; }

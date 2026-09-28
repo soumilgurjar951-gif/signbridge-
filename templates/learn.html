@@ -1,0 +1,168 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Learn - Sign Language App{% endblock %}
+
+{% block content %}
+<!-- Page Header -->
+<section class="bg-gradient-to-r from-primary-600 to-primary-800 text-white py-16">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h1 class="text-4xl md:text-5xl font-bold mb-4">Learn Sign Language</h1>
+        <p class="text-xl text-primary-100">Choose your learning path and start your journey</p>
+    </div>
+</section>
+
+<!-- Learning Paths -->
+<section class="py-16">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+            <!-- Beginner Course -->
+            <div class="card" x-data="{ expanded: false }">
+                <div class="flex items-center justify-between mb-4">
+                    <h3 class="text-2xl font-bold text-primary-600">Beginner</h3>
+                    <span class="px-3 py-1 bg-green-100 text-green-800 rounded-full text-sm font-semibold">New</span>
+                </div>
+                <p class="text-gray-600 mb-6">Start from scratch. Learn basic signs and alphabet.</p>
+                
+                <div class="space-y-3 mb-6">
+                    <div class="flex items-center text-gray-700">
+                        <svg class="w-5 h-5 mr-2 text-primary-500" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                        </svg>
+                        15 Lessons
+                    </div>
+                    <div class="flex items-center text-gray-700">
+                        <svg class="w-5 h-5 mr-2 text-primary-500" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                        </svg>
+                        26 Alphabet Signs
+                    </div>
+                    <div class="flex items-center text-gray-700">
+                        <svg class="w-5 h-5 mr-2 text-primary-500" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                        </svg>
+                        50+ Common Words
+                    </div>
+                </div>
+                
+                <button @click="expanded = !expanded" class="btn btn-primary w-full">
+                    Start Learning
+                </button>
+            </div>
+
+            <!-- Intermediate Course -->
+            <div class="card">
+                <div class="flex items-center justify-between mb-4">
+                    <h3 class="text-2xl font-bold text-primary-600">Intermediate</h3>
+                    <span class="px-3 py-1 bg-blue-100 text-blue-800 rounded-full text-sm font-semibold">Popular</span>
+                </div>
+                <p class="text-gray-600 mb-6">Build on basics. Learn phrases and conversations.</p>
+                
+                <div class="space-y-3 mb-6">
+                    <div class="flex items-center text-gray-700">
+                        <svg class="w-5 h-5 mr-2 text-primary-500" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                        </svg>
+                        25 Lessons
+                    </div>
+                    <div class="flex items-center text-gray-700">
+                        <svg class="w-5 h-5 mr-2 text-primary-500" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                        </svg>
+                        100+ Phrases
+                    </div>
+                    <div class="flex items-center text-gray-700">
+                        <svg class="w-5 h-5 mr-2 text-primary-500" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                        </svg>
+                        Daily Conversations
+                    </div>
+                </div>
+                
+                <button class="btn btn-primary w-full">
+                    Start Learning
+                </button>
+            </div>
+
+            <!-- Advanced Course -->
+            <div class="card">
+                <div class="flex items-center justify-between mb-4">
+                    <h3 class="text-2xl font-bold text-primary-600">Advanced</h3>
+                    <span class="px-3 py-1 bg-purple-100 text-purple-800 rounded-full text-sm font-semibold">Pro</span>
+                </div>
+                <p class="text-gray-600 mb-6">Master complex expressions and professional signing.</p>
+                
+                <div class="space-y-3 mb-6">
+                    <div class="flex items-center text-gray-700">
+                        <svg class="w-5 h-5 mr-2 text-primary-500" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                        </svg>
+                        35 Lessons
+                    </div>
+                    <div class="flex items-center text-gray-700">
+                        <svg class="w-5 h-5 mr-2 text-primary-500" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                        </svg>
+                        Professional Terms
+                    </div>
+                    <div class="flex items-center text-gray-700">
+                        <svg class="w-5 h-5 mr-2 text-primary-500" fill="currentColor" viewBox="0 0 20 20">
+                            <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
+                        </svg>
+                        Storytelling
+                    </div>
+                </div>
+                
+                <button class="btn btn-primary w-full">
+                    Start Learning
+                </button>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Progress Section -->
+<section class="bg-gray-100 py-16">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 class="text-3xl font-bold mb-8 text-center">Your Learning Progress</h2>
+        
+        <div class="bg-white rounded-xl shadow-lg p-8" x-data="{ progress: 0 }" x-init="setInterval(() => { if(progress < 65) progress += 1 }, 20)">
+            <div class="mb-4">
+                <div class="flex justify-between mb-2">
+                    <span class="font-semibold">Overall Progress</span>
+                    <span class="font-semibold" x-text="progress + '%'"></span>
+                </div>
+                <div class="w-full bg-gray-200 rounded-full h-4 overflow-hidden">
+                    <div class="bg-primary-600 h-4 rounded-full transition-all duration-500" :style="'width: ' + progress + '%'"></div>
+                </div>
+            </div>
+            
+            <div class="grid grid-cols-1 md:grid-cols-3 gap-6 mt-8">
+                <div class="text-center">
+                    <div class="text-3xl font-bold text-primary-600">12</div>
+                    <div class="text-gray-600">Lessons Completed</div>
+                </div>
+                <div class="text-center">
+                    <div class="text-3xl font-bold text-primary-600">45</div>
+                    <div class="text-gray-600">Signs Learned</div>
+                </div>
+                <div class="text-center">
+                    <div class="text-3xl font-bold text-primary-600">8</div>
+                    <div class="text-gray-600">Days Streak</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Practice Section -->
+<section class="py-16">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <h2 class="text-3xl font-bold mb-4">Ready to Practice?</h2>
+        <p class="text-xl text-gray-600 mb-8">Test your knowledge with interactive exercises</p>
+        <a href="/practice" class="btn btn-primary px-8 py-4 text-lg inline-block">
+            Start Practice
+        </a>
+    </div>
+</section>
+{% endblock %}

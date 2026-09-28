@@ -1,0 +1,28 @@
+# Dependencies
+node_modules/
+
+# Next.js build output
+.next/
+out/
+dist/
+
+# Env / secrets
+.env*
+!.env.example
+
+# Logs
+*.log
+npm-debug.log*
+
+# OS
+.DS_Store
+Thumbs.db
+
+# Python / Django leftovers
+__pycache__/
+*.py[cod]
+*.egg-info/
+db.sqlite3
+local_settings.py
+venv/
+ENV/

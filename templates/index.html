@@ -1,0 +1,101 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}Home - Sign Language App{% endblock %}
+
+{% block content %}
+<!-- Hero Section -->
+<section class="bg-gradient-to-r from-primary-500 to-primary-700 text-white">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+            <div class="animate-fade-in">
+                <h1 class="text-5xl font-bold mb-6">Learn Sign Language with Ease</h1>
+                <p class="text-xl mb-8 text-primary-100">Master sign language through interactive lessons and AI-powered recognition technology.</p>
+                <div class="flex flex-col sm:flex-row gap-4">
+                    <a href="/learn" class="btn bg-white text-primary-600 hover:bg-gray-100 px-8 py-3 text-lg">
+                        Start Learning
+                    </a>
+                    <a href="/about" class="btn border-2 border-white text-white hover:bg-white hover:text-primary-600 px-8 py-3 text-lg">
+                        Learn More
+                    </a>
+                </div>
+            </div>
+            <div class="hidden md:block">
+                <div class="bg-white/10 backdrop-blur-lg rounded-2xl p-8 animate-fade-in">
+                    <div class="aspect-video bg-white/20 rounded-lg flex items-center justify-center">
+                        <span class="text-6xl">🤟</span>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Features Section -->
+<section class="py-20">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="text-center mb-16">
+            <h2 class="text-4xl font-bold mb-4">Why Choose SignLang?</h2>
+            <p class="text-xl text-gray-600">Everything you need to master sign language</p>
+        </div>
+        
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <!-- Feature 1 -->
+            <div class="card text-center" x-data="{ hover: false }" @mouseenter="hover = true" @mouseleave="hover = false">
+                <div class="text-5xl mb-4" :class="{ 'animate-bounce': hover }">📚</div>
+                <h3 class="text-2xl font-semibold mb-3">Interactive Lessons</h3>
+                <p class="text-gray-600">Learn at your own pace with structured, easy-to-follow lessons designed for all skill levels.</p>
+            </div>
+            
+            <!-- Feature 2 -->
+            <div class="card text-center" x-data="{ hover: false }" @mouseenter="hover = true" @mouseleave="hover = false">
+                <div class="text-5xl mb-4" :class="{ 'animate-bounce': hover }">🤖</div>
+                <h3 class="text-2xl font-semibold mb-3">AI Recognition</h3>
+                <p class="text-gray-600">Practice with real-time feedback using our advanced AI-powered sign recognition system.</p>
+            </div>
+            
+            <!-- Feature 3 -->
+            <div class="card text-center" x-data="{ hover: false }" @mouseenter="hover = true" @mouseleave="hover = false">
+                <div class="text-5xl mb-4" :class="{ 'animate-bounce': hover }">🎯</div>
+                <h3 class="text-2xl font-semibold mb-3">Track Progress</h3>
+                <p class="text-gray-600">Monitor your learning journey with detailed analytics and personalized recommendations.</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Stats Section -->
+<section class="bg-primary-50 py-20">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-8 text-center">
+            <div x-data="{ count: 0 }" x-init="setInterval(() => { if(count < 1000) count += 50 }, 100)">
+                <div class="text-4xl font-bold text-primary-600" x-text="count + '+'"></div>
+                <div class="text-gray-600 mt-2">Active Learners</div>
+            </div>
+            <div x-data="{ count: 0 }" x-init="setInterval(() => { if(count < 500) count += 25 }, 100)">
+                <div class="text-4xl font-bold text-primary-600" x-text="count + '+'"></div>
+                <div class="text-gray-600 mt-2">Signs Taught</div>
+            </div>
+            <div x-data="{ count: 0 }" x-init="setInterval(() => { if(count < 50) count += 5 }, 100)">
+                <div class="text-4xl font-bold text-primary-600" x-text="count + '+'"></div>
+                <div class="text-gray-600 mt-2">Lessons Available</div>
+            </div>
+            <div x-data="{ count: 0 }" x-init="setInterval(() => { if(count < 98) count += 2 }, 100)">
+                <div class="text-4xl font-bold text-primary-600" x-text="count + '%'"></div>
+                <div class="text-gray-600 mt-2">Success Rate</div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- CTA Section -->
+<section class="py-20">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <h2 class="text-4xl font-bold mb-6">Ready to Start Your Journey?</h2>
+        <p class="text-xl text-gray-600 mb-8">Join thousands of learners mastering sign language today.</p>
+        <a href="/learn" class="btn btn-primary px-8 py-4 text-lg inline-block">
+            Get Started Now
+        </a>
+    </div>
+</section>
+{% endblock %}

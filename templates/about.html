@@ -1,0 +1,190 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block title %}About - Sign Language App{% endblock %}
+
+{% block content %}
+<!-- Hero Section -->
+<section class="bg-gradient-to-r from-primary-600 to-primary-800 text-white py-20">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <h1 class="text-4xl md:text-5xl font-bold mb-6">About SignLang</h1>
+        <p class="text-xl text-primary-100 max-w-3xl mx-auto">
+            Breaking communication barriers through innovative technology and inclusive education
+        </p>
+    </div>
+</section>
+
+<!-- Mission Section -->
+<section class="py-20">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-12 items-center">
+            <div>
+                <h2 class="text-3xl font-bold mb-6">Our Mission</h2>
+                <p class="text-lg text-gray-700 mb-4">
+                    SignLang is dedicated to making sign language accessible to everyone. We believe that communication is a fundamental human right, and no one should be excluded from conversations.
+                </p>
+                <p class="text-lg text-gray-700 mb-4">
+                    Using cutting-edge AI technology and interactive learning methods, we're building a platform that makes learning sign language engaging, effective, and fun.
+                </p>
+                <p class="text-lg text-gray-700">
+                    Our goal is to create a world where sign language is as common as any spoken language, fostering true inclusivity and understanding.
+                </p>
+            </div>
+            <div class="bg-primary-100 rounded-2xl p-8 text-center">
+                <div class="text-7xl mb-4">🌍</div>
+                <h3 class="text-2xl font-bold text-primary-800 mb-2">Global Impact</h3>
+                <p class="text-gray-700">Connecting communities across 50+ countries</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Values Section -->
+<section class="bg-gray-50 py-20">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 class="text-3xl font-bold mb-12 text-center">Our Core Values</h2>
+        
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+            <div class="bg-white rounded-xl p-8 text-center shadow-md">
+                <div class="text-5xl mb-4">💡</div>
+                <h3 class="text-xl font-bold mb-3">Innovation</h3>
+                <p class="text-gray-600">
+                    Leveraging AI and modern technology to create the most effective learning experience possible.
+                </p>
+            </div>
+            
+            <div class="bg-white rounded-xl p-8 text-center shadow-md">
+                <div class="text-5xl mb-4">🤝</div>
+                <h3 class="text-xl font-bold mb-3">Inclusivity</h3>
+                <p class="text-gray-600">
+                    Building bridges between hearing and deaf communities through shared understanding and respect.
+                </p>
+            </div>
+            
+            <div class="bg-white rounded-xl p-8 text-center shadow-md">
+                <div class="text-5xl mb-4">🎯</div>
+                <h3 class="text-xl font-bold mb-3">Accessibility</h3>
+                <p class="text-gray-600">
+                    Making sign language education available to everyone, regardless of location or background.
+                </p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Technology Section -->
+<section class="py-20">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 class="text-3xl font-bold mb-12 text-center">Powered by Advanced Technology</h2>
+        
+        <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+            <div class="card">
+                <div class="flex items-start">
+                    <div class="text-4xl mr-4">🤖</div>
+                    <div>
+                        <h3 class="text-xl font-bold mb-2">AI Recognition</h3>
+                        <p class="text-gray-600">
+                            Our machine learning models can recognize and evaluate sign language gestures in real-time, providing instant feedback on your practice.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="card">
+                <div class="flex items-start">
+                    <div class="text-4xl mr-4">📱</div>
+                    <div>
+                        <h3 class="text-xl font-bold mb-2">Cross-Platform</h3>
+                        <p class="text-gray-600">
+                            Learn anywhere, anytime. Our responsive design works seamlessly across desktop, tablet, and mobile devices.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="card">
+                <div class="flex items-start">
+                    <div class="text-4xl mr-4">📊</div>
+                    <div>
+                        <h3 class="text-xl font-bold mb-2">Progress Tracking</h3>
+                        <p class="text-gray-600">
+                            Advanced analytics help you understand your learning patterns and optimize your study sessions for maximum retention.
+                        </p>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="card">
+                <div class="flex items-start">
+                    <div class="text-4xl mr-4">🎮</div>
+                    <div>
+                        <h3 class="text-xl font-bold mb-2">Gamification</h3>
+                        <p class="text-gray-600">
+                            Earn achievements, maintain streaks, and compete with friends to make learning engaging and motivating.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- Team Section -->
+<section class="bg-primary-50 py-20">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        <h2 class="text-3xl font-bold mb-12 text-center">Meet Our Team</h2>
+        
+        <div class="grid grid-cols-1 md:grid-cols-4 gap-8">
+            <div class="text-center">
+                <div class="w-32 h-32 bg-primary-200 rounded-full mx-auto mb-4 flex items-center justify-center text-5xl">
+                    👨‍💻
+                </div>
+                <h3 class="font-bold text-lg mb-1">Development Team</h3>
+                <p class="text-gray-600 text-sm">Building the future of learning</p>
+            </div>
+            
+            <div class="text-center">
+                <div class="w-32 h-32 bg-primary-200 rounded-full mx-auto mb-4 flex items-center justify-center text-5xl">
+                    🧑‍🏫
+                </div>
+                <h3 class="font-bold text-lg mb-1">Education Experts</h3>
+                <p class="text-gray-600 text-sm">Crafting effective curricula</p>
+            </div>
+            
+            <div class="text-center">
+                <div class="w-32 h-32 bg-primary-200 rounded-full mx-auto mb-4 flex items-center justify-center text-5xl">
+                    🦻
+                </div>
+                <h3 class="font-bold text-lg mb-1">Deaf Community</h3>
+                <p class="text-gray-600 text-sm">Guiding authentic content</p>
+            </div>
+            
+            <div class="text-center">
+                <div class="w-32 h-32 bg-primary-200 rounded-full mx-auto mb-4 flex items-center justify-center text-5xl">
+                    🎨
+                </div>
+                <h3 class="font-bold text-lg mb-1">Design Team</h3>
+                <p class="text-gray-600 text-sm">Creating beautiful experiences</p>
+            </div>
+        </div>
+    </div>
+</section>
+
+<!-- CTA Section -->
+<section class="py-20">
+    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <h2 class="text-3xl font-bold mb-6">Join Our Community</h2>
+        <p class="text-xl text-gray-600 mb-8">
+            Be part of the movement to make the world more inclusive, one sign at a time.
+        </p>
+        <div class="flex flex-col sm:flex-row gap-4 justify-center">
+            <a href="/learn" class="btn btn-primary px-8 py-3 text-lg">
+                Start Learning
+            </a>
+            <a href="/contact" class="btn btn-secondary px-8 py-3 text-lg">
+                Contact Us
+            </a>
+        </div>
+    </div>
+</section>
+{% endblock %}
