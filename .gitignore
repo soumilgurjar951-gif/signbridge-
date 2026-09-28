@@ -26,3 +26,6 @@ db.sqlite3
 local_settings.py
 venv/
 ENV/
+
+# TS build info
+tsconfig.tsbuildinfo
